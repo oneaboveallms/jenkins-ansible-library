@@ -26,7 +26,6 @@ def call(Map config) {
                     script {
                         ansiblePlaybook(
                             playbook: config.playbookPath
-                            inventory: config.inventory
                         )
                     }
                 }
