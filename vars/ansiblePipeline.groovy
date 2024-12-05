@@ -26,6 +26,8 @@ def call(Map config) {
                     script {
                         ansiblePlaybook(
                             playbook: config.playbookPath
+                            inventory: 'inventory.ini',
+                            extras: '--ask-become-pass'
                         )
                     }
                 }
