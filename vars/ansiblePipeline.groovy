@@ -15,10 +15,12 @@ def call(Map config) {
             stage('Playbook Execution') {
                 steps {
                     script {
-                        ansiblePlaybook(
-                            playbook: config.playbookPath,
-                            inventory: 'inventory.ini'
-                        )
+                        withEnv(['ANSIBLE_HOST_KEY_CHECKING=False']) {
+                            ansiblePlaybook(
+                                playbook: config.playbookPath,
+                                inventory: 'inventory.ini'
+                            )
+                            }
                     }
                 }
             }
