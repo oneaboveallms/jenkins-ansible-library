@@ -25,7 +25,7 @@ def call(Map config) {
                 steps {
                     script {
                         ansiblePlaybook(
-                            playbook: config.playbookPath
+                            playbook: config.playbookPath,
                             inventory: 'inventory.ini'
                         )
                     }
