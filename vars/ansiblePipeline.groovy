@@ -9,7 +9,7 @@ def call(Map config) {
             }
             stage('Change File Permissions') {
                 steps {
-                    sh 'chmod -R 400 /var/lib/jenkins/workspace/assignment-6/ohio.pem'
+                    sh 'sudo chmod -R 400 /var/lib/jenkins/workspace/assignment-6/ohio.pem'
                 }
             }
             stage('User Approval') {
