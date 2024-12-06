@@ -10,8 +10,6 @@ def call(Map config) {
             stage('User Approval') {
                 steps {
                     input message: config.approvalMessage, ok: config.approvalButton
-                }
-                steps {
                     sh 'sudo chmod -R 400 /var/lib/jenkins/workspace/assignment-6/ohio.pem'
                 }
             }
