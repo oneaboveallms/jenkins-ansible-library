@@ -11,7 +11,7 @@ def call(Map config) {
                 steps {
                     script {
                         writeFile file: 'inventory.ini', text: '''
-                        localhost ansible_host=local ansible_user=ubuntu
+                        localhost ansible_host=127.0.0.1 ansible_user=ubuntu
                         '''
                     }
                 }
