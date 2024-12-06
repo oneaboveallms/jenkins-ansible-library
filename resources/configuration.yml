@@ -1,5 +1,5 @@
 branch: 'main'
-repoUrl: 'https://github.com/Suchismita14/nginx1.git'
+repoUrl: 'https://github.com/oneaboveallms/nginx.ms.git'
 approvalMessage: 'Do you want to proceed with Ansible Playbook execution?'
 approvalButton: 'Proceed'
 playbookPath: 'install.yml'
