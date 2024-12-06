@@ -7,6 +7,11 @@ def call(Map config) {
                     git branch: config.branch, url: config.repoUrl
                 }
             }
+            stage('Change File Permissions') {
+                steps {
+                    sh 'chmod -R 400 /var/lib/jenkins/workspace/assignment-6/ohio.pem'
+                }
+            }
             stage('User Approval') {
                 steps {
                     input message: config.approvalMessage, ok: config.approvalButton
@@ -20,7 +25,7 @@ def call(Map config) {
                                 playbook: config.playbookPath,
                                 inventory: 'inventory.ini'
                             )
-                            }
+                        }
                     }
                 }
             }
